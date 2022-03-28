@@ -1,8 +1,7 @@
 import React from 'react'
-import { Footer, Navbar } from '../../components/allComponents'
-import ".../cartPage/cartPage.css"
-import "/wishlist.css"
-function Wishlist() {
+import { Footer, Navbar, Wishlist } from '../../components/allComponents'
+import "./wishlistPage.css"
+function WishlistPage() {
   return (
     <>
     <Navbar />
@@ -12,4 +11,4 @@ function Wishlist() {
   )
 }
 
-export { Wishlist }
+export { WishlistPage }
