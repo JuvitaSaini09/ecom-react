@@ -15,7 +15,7 @@ const NavbarLogout=()=>{
 
     <Link to="/ProductPage"><li><a href="/components/product-page/product-page.html">PRODUCTS</a></li></Link>   
 
-    <Link to="/logoutPage"><li><a href="/components/product-page/login-page.html">Logout</a></li></Link> 
+    <Link to="/logoutPage"><li><a href="/components/product-page/login-page.html">LOGOUT</a></li></Link> 
 
         <Link to="/wishlistPage">  <li><a href="/components/wishlist-page/wishlist-page.html"> <i className="fas fa-heart" /></a></li></Link>
 

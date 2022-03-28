@@ -17,7 +17,7 @@ function Login() {
     <input type="password" className="text-input" placeholder="Your password" /><span className="login-icon"><i className="fas fa-eye" /></span>
   </div>
   <div className="login-bottom"><button>Login</button>
-    <p>Create Account<Link to="/signupPage" > <a href="/components/authentication-page/signup-page.html">Sign up </a></Link></p>
+    <p>Create Account <Link to="/signupPage" style={{color:"blue"}}>Sign up</Link></p>
   </div>
 </main>
     </>

@@ -8,20 +8,25 @@ import CartPage from "./pages/cartPage/cartPage";
 import { WishlistPage } from "./pages/wishlistPage/wishlistPage";
 import { LoginPage } from "./pages/loginPage/loginPage";
 import SingupPage from "./pages/signupPage/signupPage";
+import { LogoutPage } from "./pages/logoutPage/logoutPage";
+import { Login } from "./components/allComponents";
 
 
 function App() {
   return (
     <div className="App">
        
-       <Routes>
+        <Routes>
             <Route path="/"  element={<Home />} />
             <Route path="/ProductPage"  element={<ProductPage />} />
             <Route path="/cartPage"  element={<CartPage />} />
             <Route path="/wishlistPage"  element={<WishlistPage />} />
             <Route path="/loginPage"  element={<LoginPage />} />
             <Route path="/signupPage"  element={<SingupPage />} />
-       </Routes>
+            <Route path="/logoutPage"  element={<LogoutPage />} />
+       </Routes> 
+
+     
        
       </div>
   );

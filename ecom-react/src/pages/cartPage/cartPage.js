@@ -1,11 +1,12 @@
 import React from 'react'
 import "./cartPage.css"
-import { CartItems, Navbar, PriceTable } from '../../components/allComponents'
+import { CartItems, PriceTable } from '../../components/allComponents'
+import { NavbarLogout } from '../../components/navbar/navbarLogout'
 
 function CartPage() {
   return (
     <>
-    <Navbar />
+    <NavbarLogout />
     <main class="cart-page">
         <CartItems />
         <PriceTable />
