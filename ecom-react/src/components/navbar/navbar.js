@@ -10,11 +10,17 @@ const Navbar=()=>{
     </div>
     <nav className="nav">
       <ul className="nav-links">
-      <Link to="/">    <li><a href="/index.html">HOME</a></li></Link>
-    <Link to="/ProductPage"><li><a href="/components/product-page/product-page.html">PRODUCTS</a></li></Link>    
-        <li><a href="/components/authentication-page/login-page.html" /></li>
+
+      <Link to="/"><li><a href="/index.html">HOME</a></li></Link>
+
+    <Link to="/ProductPage"><li><a href="/components/product-page/product-page.html">PRODUCTS</a></li></Link>   
+
+    <Link to="/loginPage"><li><a href="/components/product-page/login-page.html">ACCOUNT</a></li></Link> 
+
         <Link to="/wishlistPage">  <li><a href="/components/wishlist-page/wishlist-page.html"> <i className="fas fa-heart" /></a></li></Link>
+
         <Link to="/cartPage"> <li><a href="/components/cart-page/cart-page.html"><i className="fas fa-shopping-bag" /></a></li> </Link>
+
       </ul>
     </nav>
   </div>
