@@ -1,4 +1,5 @@
 import React from 'react'
+import "./cartPage.css"
 import { CartItems, Navbar, PriceTable } from '../../components/allComponents'
 
 function CartPage() {
