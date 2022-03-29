@@ -9,7 +9,7 @@ import thinkAndGrowRich from "../../images/think-and-grow-rich.png"
 function ProductListing() {
   return (
     <>
-      
+       <h1>Testing</h1>
   <section className="product-page">
     <div className="card-featured">
       <div className="card6 card">
