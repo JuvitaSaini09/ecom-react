@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-const Navbar=()=>{
+const NavbarLogout=()=>{
     return(
         <>
         <header className="header-nav">
@@ -15,7 +15,7 @@ const Navbar=()=>{
 
     <Link to="/ProductPage"><li><a href="/components/product-page/product-page.html">PRODUCTS</a></li></Link>   
 
-    <Link to="/loginPage"><li><a href="/components/product-page/login-page.html">ACCOUNT</a></li></Link> 
+    <Link to="/logoutPage"><li><a href="/components/product-page/login-page.html">LOGOUT</a></li></Link> 
 
         <Link to="/wishlistPage">  <li><a href="/components/wishlist-page/wishlist-page.html"> <i className="fas fa-heart" /></a></li></Link>
 
@@ -30,4 +30,4 @@ const Navbar=()=>{
     )
 }
 
-export {Navbar};
+export {NavbarLogout};
