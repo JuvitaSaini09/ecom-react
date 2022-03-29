@@ -23,12 +23,12 @@ function Sidebar() {
         <input type="checkbox" className="category" id="all-book" name="all" defaultChecked /><label htmlFor="all-book">All</label>
       </div>
       <div>
-        <input type="checkbox" className="category" id="cook-book" name="cook book" />
-        <label htmlFor="cook-book">Cooking</label>
+        <input type="checkbox" className="category" id="self-help" name="self-help" />
+        <label htmlFor="self-help">Sel-help</label>
       </div>
       <div>
-        <input type="checkbox" className="category" id="drama" name="drama" />
-        <label htmlFor="drama">Drama</label>
+        <input type="checkbox" className="category" id="horror" name="horror" />
+        <label htmlFor="horror">Horror</label>
       </div>
       <div>
         <input type="checkbox" className="category" id="health" name="health" />
@@ -39,12 +39,12 @@ function Sidebar() {
         <label htmlFor="non-fiction">Non-fiction</label>
       </div>
       <div>
-        <input type="checkbox" className="category" id="biography" name="biogaphy" />
-        <label htmlFor="biography">Biography</label>
+        <input type="checkbox" className="category" id="novel" name="novel" />
+        <label htmlFor="novel">Novel</label>
       </div>
       <div>
-        <input type="checkbox" className="category" id="sci-fiction" name="sci-fiction" />
-        <label htmlFor="sci-fiction">Science Fiction</label>
+        <input type="checkbox" className="category" id="sci-fiction" name="literature" />
+        <label htmlFor="literature">Literature</label>
       </div>
     </div>
     <div className="Price-range-container">

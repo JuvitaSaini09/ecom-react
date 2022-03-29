@@ -9,7 +9,6 @@ import { WishlistPage } from "./pages/wishlistPage/wishlistPage";
 import { LoginPage } from "./pages/loginPage/loginPage";
 import SingupPage from "./pages/signupPage/signupPage";
 import { LogoutPage } from "./pages/logoutPage/logoutPage";
-import { Login } from "./components/allComponents";
 
 
 function App() {
