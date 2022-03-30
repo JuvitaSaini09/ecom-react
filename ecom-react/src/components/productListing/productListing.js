@@ -1,14 +1,15 @@
 import React from 'react'
-import {products} from "./../../backend/db/products"
-
+import { useFilter } from '../../context/filterContext/filterContext'
 
 
 function ProductListing() {
+  const {state}=useFilter();
+  console.log(state)
   return (
     <section className="product-page">
 
     {
-      products.map(({src,title,author,price,oldPrice,categoryName,rating,details})=>{
+      state.map(({src,title,author,price,oldPrice,categoryName,rating,details})=>{
   return(
    <div className="card-featured">
      <div className="card6 card">
