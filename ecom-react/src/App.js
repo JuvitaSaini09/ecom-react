@@ -1,7 +1,6 @@
 import { Route,Routes } from "react-router-dom";
 import React from 'react'
 import "./App.css";
-import logo from "./logo.png";
 import { Home } from "./pages/home/home";
 import {ProductPage} from "./pages/productPage/productPage"
 import CartPage from "./pages/cartPage/cartPage";

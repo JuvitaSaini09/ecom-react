@@ -36,8 +36,8 @@ export const products = [
     src:fiveAmClub,
     title: "The 5 Am Club",
     author: "Robin Sharma",
-    price: "179",
-    oldPrice:"228",
+    price: "550",
+    oldPrice:"600",
     categoryName: "Self-help",
     rating : 4.1,
     details :"This is details of book"
@@ -48,10 +48,10 @@ export const products = [
     src:theHouseOfStrangeStories,
     title: "The House Of Strangers Stories",
     author: "Ruskin Bond",
-    price: "270",
-    oldPrice:"400",
+    price: "890",
+    oldPrice:"1000",
     categoryName: "Horror",
-    rating :3.8,
+    rating :3,
     details :"This is details of book"
   },
   {
@@ -62,7 +62,7 @@ export const products = [
     price: "170",
     oldPrice:"251",
     categoryName: "Novel",
-    rating : 4.6,
+    rating : 4,
     details :"This is details of book"
 
   },
@@ -71,10 +71,10 @@ export const products = [
     src:doTheEpicShit,
     title: "DO EPIC SHIT",
     author: "Ankur Warikoo",
-    price: "248",
-    oldPrice:"298",
+    price: "1190",
+    oldPrice:"1300",
     categoryName: "Non-fiction",
-    rating : 4.3,
+    rating : 3.7,
     details :"This is details of book"
 
   },
@@ -83,8 +83,8 @@ export const products = [
     src:ikigai,
     title: "Ikigai",
     author: "Francesc Miralles and Hector Garcia",
-    price: "165",
-    oldPrice:"299",
+    price: "750",
+    oldPrice:"800",
     categoryName: "Self-help",
     rating : 4.6,
     details :"This is details of book"
@@ -95,8 +95,8 @@ export const products = [
     src:thinkAndGrowRich,
     title: "Think And Grow Rich",
     author: "Napolean Hill",
-    price: "140",
-    oldPrice:"292",
+    price: "117",
+    oldPrice:"200",
     categoryName: "Non-fiction",
     rating : 4.5,
     details :"This is details of book"
@@ -119,10 +119,10 @@ export const products = [
     src:unfinished,
     title: "Unfinished",
     author: "Jonas Priyanka Chopra",
-    price: "334",
+    price: "350",
     oldPrice:"450",
     categoryName: "Literature",
-    rating : 3.5,
+    rating : 2.5,
     details :"The most awaited autobiography by Priyanka Chopra!'I have always felt that life is a solitary journey, that we are each on a train, riding through our hours, our days, our years. We get on alone, we leave alone, and the decisions we made as we travel on the train are our responsibility alone.'In this thoughtful and revealing memoir, readers will accompany one of the world's most recognizable women on her journey of self-discovery. A remarkable life story rooted in two different worlds, Unfinished offers insights into Priyanka Chopra Jonas's childhood in India; her formative teenage years in the United States; and her return to India, where against all odds as a newcomer to the pageant world, she won the national and international beauty competitions that launched her global acting career."
 
   },
@@ -131,10 +131,10 @@ export const products = [
     src:theFitnessCurrency,
     title: "The Fitness Currency",
     author: "Utkarsh Rai",
-    price: "244",
-    oldPrice:"350",
+    price: "1400",
+    oldPrice:"1550",
     categoryName: "Fitness",
-    rating : 3.9,
+    rating : 3.5,
     details :"This is details of book"
 
   },
@@ -158,7 +158,7 @@ export const products = [
   price: "590",
   oldPrice:"650",
   categoryName: "Horror",
-  rating : 4.7,
+  rating : 1,
   details :"This is details of book"
 }
 
