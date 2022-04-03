@@ -125,6 +125,15 @@ const FilterProvider = ({
     return filteredPriceRangeArray;
   };
 
+
+  const filterByRating = (data, ratingValue) => {
+
+    const filteredArray = data.filter(book => book.rating <= ratingValue)
+    return filteredArray;
+  }
+
+
+
   //reducer function
   const filterReducer = (state, action) => {
     switch (action.type) {
@@ -199,9 +208,36 @@ const FilterProvider = ({
             newState2 = lowToHigh(newState2);
           }
         }
-        if (newState2[0] === undefined) console.log("kuch ni aisa hmary paas")
 
         return newState2;
+
+      case "sortByRating":
+        let newState3 = filterByRating([...data], action.currentRating);
+
+        if (newState3[0] === undefined) {
+          console.log("i will never print");
+        }
+
+        if (isDataCategorized.isFiltered) {
+          newState3 = categoryCheckBox(newState3);
+        }
+
+        //code to check ,Is data filtered by category ?
+        if (isDataFilteredByPrice.isFiltered) {
+          newState3 = priceCheckBox(newState3);
+        }
+
+        if (isDataSorted.IsSorted) {
+          if (isDataSorted.Sort === "HIGH_TO_LOW") {
+            newState3 = highToLow(newState3);
+          }
+          if (isDataSorted.Sort === "LOW_TO_HIGH") {
+            newState3 = lowToHigh(newState3);
+          }
+        }
+
+        return newState3;
+
 
       default:
         return [...state];
@@ -211,8 +247,7 @@ const FilterProvider = ({
   const [state, dispatch] = useReducer(filterReducer, data);
 
 
-  return ( <
-    filterContext.Provider value = {
+  return ( <filterContext.Provider value = {
       {
         state,
         dispatch,
