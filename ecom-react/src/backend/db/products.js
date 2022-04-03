@@ -73,7 +73,7 @@ export const products = [
     author: "Ankur Warikoo",
     price: "1190",
     oldPrice:"1300",
-    categoryName: "Non-fiction",
+    categoryName: "Non-Fiction",
     rating : 3.7,
     details :"This is details of book"
 
@@ -97,7 +97,7 @@ export const products = [
     author: "Napolean Hill",
     price: "117",
     oldPrice:"200",
-    categoryName: "Non-fiction",
+    categoryName: "Non-Fiction",
     rating : 4.5,
     details :"This is details of book"
 
@@ -133,7 +133,7 @@ export const products = [
     author: "Utkarsh Rai",
     price: "1400",
     oldPrice:"1550",
-    categoryName: "Fitness",
+    categoryName: "Health/Fitness",
     rating : 3.5,
     details :"This is details of book"
 
