@@ -6,6 +6,7 @@ import { makeServer } from "./server";
 import {BrowserRouter} from "react-router-dom"
 import {FilterProvider} from "../src/context/filterContext/filterContext" 
 import { CartProvider } from "../src/context/cartContext/cartContext";
+import { WishlistProvider } from "./context/wishlistContext/wishlistContext";
 
 // Call make Server
 makeServer();
@@ -13,13 +14,13 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    <WishlistProvider>
     <FilterProvider>
     <CartProvider >
     <App />
     </CartProvider>
     </FilterProvider>
-  
-   
+  </WishlistProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
