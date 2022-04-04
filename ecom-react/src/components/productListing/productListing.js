@@ -1,44 +1,13 @@
 import React, { useState } from 'react'
+import { useCart } from '../../context/cartContext/cartContext';
 import { useFilter } from '../../context/filterContext/filterContext'
 
 
 function ProductListing() {
   const {state}=useFilter();
-  const [cart,setCart]=useState([]);
-  //<--------- copy paste below funciton in cartContext page ---------->
-  const cartReducer=(state,action)=>{
-    
-  }
-
-  //this function to be added in useContext in future
-  const addToCart=(clickedItem)=>{
-     const isItemInCart = cart.find((cartItem) => clickedItem._id === cartItem._id);
-
-    console.log("kya ha pehly sy present ?",isItemInCart)
-
-     console.log("id of clicked item",clickedItem._id, "is item in cart",isItemInCart)
-
-    //clciked item is present in cart
-   if(isItemInCart){
-    setCart(
-      cart.map((element) =>
-          element._id === clickedItem._id
-            ? { ...isItemInCart, count: isItemInCart.count + 1 }
-            : element
-        )
-    );
-   }
-   //if clicked item is not present in cart
-   else{ 
-    setCart([...cart, { ...clickedItem, count: 1 }]);
-   }
-
-  }
-  //<--------- copy paste above funciton in cartContext page ---------->
-
-
-  //below line to be removed after testing 
-  console.log("cart data :----> ",cart,"<---")
+ const {dispatch}=useCart();
+  
+  
   return (
     <section className="product-page">
 
@@ -64,7 +33,7 @@ function ProductListing() {
            </div>
          </a>
          <footer>
-           <button className="btn-cart" onClick={()=>{addToCart(item)}}>Add to cart</button>
+           <button className="btn-cart" onClick={()=>{dispatch({type:"ADD_TO_CART",book:item})}}>Add to cart</button>
          </footer>
        </div>
      </div>
