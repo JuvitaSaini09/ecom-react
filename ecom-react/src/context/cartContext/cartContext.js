@@ -3,20 +3,22 @@ import React, { createContext, useContext, useReducer } from 'react'
 const cartContext=createContext(null);
 
 
-// const incrementCount=(clickedItem,cart)=>{
-//     return cart.map(item=>{
-//         // console.log(clickedItem._id===cart._id)
-//         if(clickedItem._id===cart._id) return { ...item, count: item.count + 1 }
-//         else return item;
-//     })
-// }
+const incrementCount=(clickedItem,cart)=>{
 
-// const decrementCount=(clickedItem,cart)=>{
-//     return cart.map(item=>{
-//         if(clickedItem._id===cart._id) return { ...item, count: item.count - 1 }
-//         else return item;
-//     })
-// }
+     return cart.map(item=>{
+         if(item._id===clickedItem._id) 
+         return { ...item, count: item.count + 1 }
+         else return item;
+    })
+}
+
+const decrementCount=(clickedItem,cart)=>{
+    return cart.map(item=>{
+        if(item._id===clickedItem._id) 
+        return { ...item, count: item.count - 1 }
+        else return item;
+   })
+}
 
 
 const addToCart=(clickedItem,cart)=>{
@@ -62,12 +64,16 @@ const CartProvider=({ children}) =>{
              case "REMOVE_FROM_CART" :
                  return removeFromCart(action.book,state);
 
-            // case "INCREMENT_COUNT":
-            //     return incrementCount(action.book,state);
-                
+             case "INCREMENT_COUNT":
+                 if(action.book.count<10)
+                return incrementCount(action.book,state);
+                else return state;
+                  
 
-            // case "DECREMENT_COUNT":
-            //     return decrementCount(action.book,state);
+             case "DECREMENT_COUNT":
+                if(action.book.count>1)
+               return decrementCount(action.book,state);
+               else return state;
 
             default: return state;
         }

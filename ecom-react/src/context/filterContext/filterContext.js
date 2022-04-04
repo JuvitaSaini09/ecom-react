@@ -1,13 +1,12 @@
 import React, {
   createContext,
   useContext,
+  useEffect,
   useReducer,
   useState
 } from 'react'
+import axios from 'axios'
 
-import {
-  products as data
-} from '../../backend/db/products';
 
 const categories = [
   "Self-help",
@@ -72,6 +71,7 @@ const filterContext = createContext(null);
 const FilterProvider = ({
   children
 }) => {
+  const [data,setData]=useState([]);
   const [checkedList, setCheckedList] = useState(categoriesChecked);
   const [priceRangeCheckedList, setpriceRangeCheckedList] = useState(priceRangeData);
   const [isDataSorted, setIsDataSorted] = useState({
@@ -85,6 +85,18 @@ const FilterProvider = ({
   const [isDataFilteredByPrice, setIsDataFilteredByPrice] = useState({
     isFiltered: false
   });
+
+  const [sliderRatingValue,setSliderRatingValue]=useState(5);
+
+
+  useEffect(async () => {
+    try {
+      const response = await axios.get("/api/products");
+      setData(response.data.products)
+  }catch(e) {
+      console.error(e);
+  }
+  },[])
 
   //function for sorting low to high
   const lowToHigh = (state) => {
@@ -128,7 +140,7 @@ const FilterProvider = ({
 
 
   const filterByRating = (data, ratingValue) => {
-
+  console.log(data, ratingValue)
     const filteredArray = data.filter(book => book.rating <= ratingValue)
     return filteredArray;
   }
@@ -163,7 +175,6 @@ const FilterProvider = ({
           setIsDataCategorized({
             isFiltered: false
           });
-          console.log("all category unchecked")
           newState = [...data];
         }
 
@@ -181,6 +192,8 @@ const FilterProvider = ({
             newState = lowToHigh(newState);
           }
         }
+        newState = filterByRating(newState,Number(sliderRatingValue));
+
         return newState;
 
       case "priceRange":
@@ -209,15 +222,12 @@ const FilterProvider = ({
             newState2 = lowToHigh(newState2);
           }
         }
-
+        newState2 = filterByRating(newState2,Number(sliderRatingValue));
         return newState2;
 
       case "sortByRating":
+        setSliderRatingValue(action.currentRating)
         let newState3 = filterByRating([...data], action.currentRating);
-
-        if (newState3[0] === undefined) {
-          console.log("i will never print");
-        }
 
         if (isDataCategorized.isFiltered) {
           newState3 = categoryCheckBox(newState3);

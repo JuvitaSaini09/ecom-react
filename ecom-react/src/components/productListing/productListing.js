@@ -8,26 +8,7 @@ function ProductListing() {
   const {state}=useFilter();
  const {dispatch}=useCart();
  const { dispatchWishList}=useWishlist();
-//  const [heartColor,setHeartColor]=useState("grey");
 
-
- 
-//  const wishlistReducer=(stateWishlist,action)=>{
- 
-//   switch(action.type){
-//     case "ADD_TO_WISHLIST" :
-//         const newState=removeFromCart(action.book,stateWishlist)
-//         console.log("new array",newState);
-//          return newState;
-//     case "REMOVE_FROM_WISHLIST" :
-//         //REMOVE FROM WISHLIST LOGIC
-//          return state;
-//     default: return state;
-// }
-// }
-// const [stateWishlist,dispatchWishList]=useReducer(wishlistReducer,[])
-  
-  
   return (
     <section className="product-page">
 
