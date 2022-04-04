@@ -4,6 +4,7 @@ import React, {
   useReducer,
   useState
 } from 'react'
+
 import {
   products as data
 } from '../../backend/db/products';

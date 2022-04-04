@@ -8,7 +8,7 @@ function RatingSlider() {
 
   useEffect(()=>{
     dispatch({ type: "sortByRating",currentRating:rating })
-  });
+  },[rating]);
 
    // dispatch({ type: "sortByRating",currentRating:rating })
 
