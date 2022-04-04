@@ -1,16 +1,19 @@
 import React from 'react'
+import { useCart } from '../../context/cartContext/cartContext';
 import { useWishlist } from '../../context/wishlistContext/wishlistContext'
 
 function Wishlist() {
-
-  const  {stateWishlist}=useWishlist();
+ const {dispatch}=useCart();
+  const  {stateWishlist,dispatchWishList}=useWishlist();
   return (
     <>
   <div>
   <h1 className="heading-my-wishlist">My Wishlist ❤</h1>
   <section className="wishlist-card-container">
     <>
-  {stateWishlist[0] === undefined ?<h1>Wishlist is empty</h1>:<> { 
+  {stateWishlist[0] === undefined ?<h1>Wishlist is Empty</h1>:""}
+  </>
+      { 
         stateWishlist.map(item=>{
           return(
             <div className="wishlist-card">
@@ -31,19 +34,17 @@ function Wishlist() {
             </div>
           </div>
           <div className="cart-click-btns">
-            <button className="btn-cart">Remove from wishlist</button><br />
-            <button className="btn-cart">Add to cart</button>
+            <button className="btn-cart" onClick={()=>{dispatchWishList({type:"REMOVE_FROM_WISHLIST",book:item})}}>Remove from wishlist</button><br />
+            <button className="btn-cart"  onClick={()=>{dispatch({type:"ADD_TO_CART",book:item})}}>Add to cart</button>
           </div>
         </section>
       </div>
     </div>
           )
         })
-      }</>}
-  </>
-      
+      }
 
-   
+    
   </section>
 </div>
 

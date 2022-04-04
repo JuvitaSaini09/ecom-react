@@ -2,8 +2,13 @@ import React, { createContext, useContext, useReducer } from 'react'
 
 const wishlistContext=createContext(null);
 
+const removeFromWishlist=(clickedItem,wishlistItems)=>{
+    
+     return wishlistItems.filter(item=>item._id!==clickedItem._id)
+  
+}
 
-const removeFromCart=(clickedItem,cart)=>{
+const addToWishlist=(clickedItem,cart)=>{
     const isItemInWishlist = cart.find((cartItem) => clickedItem._id === cartItem._id);
      if(isItemInWishlist){
       return cart.filter(item=>item._id!==clickedItem._id)
@@ -20,12 +25,10 @@ const WishlistProvider=({children})=> {
  
     switch(action.type){
       case "ADD_TO_WISHLIST" :
-          const newState=removeFromCart(action.book,stateWishlist)
-          console.log("new array",newState);
+          const newState=addToWishlist(action.book,stateWishlist)
            return newState;
       case "REMOVE_FROM_WISHLIST" :
-          //REMOVE FROM WISHLIST LOGIC
-           return stateWishlist;
+         return removeFromWishlist(action.book,stateWishlist)
       default: return stateWishlist;
   }
   }
