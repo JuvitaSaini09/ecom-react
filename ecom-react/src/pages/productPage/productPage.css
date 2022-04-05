@@ -19,18 +19,21 @@
     display:flex;
     flex-wrap:wrap;
     gap:3rem;
+    position: absolute;
+    top:6rem;
     justify-content: center;
     margin-left:23rem;
+   
 }
 
 .side-drawer{
-    position: fixed;
-    z-index:444;
+    /*position: fixed; */
     background-color: var(--white-less);
     height:100%;
     font-size:14px;
     left:0;
     transition:all 0.5s ease; 
+    width:fit-content;
 }
 
 .side-drawer-container{
@@ -81,6 +84,9 @@ input[type=radio], input[type=checkbox]{
 
 .footer-home{
     margin-top:3rem;
+    position: absolute;
+    width: 100%;
+    top:120rem;
 }
 
 .rating-value{
@@ -112,6 +118,14 @@ input[type=radio], input[type=checkbox]{
     font-size:1.2rem;
 }
 
+.card-featured .fa-heart{
+    color:rgb(146, 143, 143);
+    cursor:pointer;
+}
+.card-featured .fa-heart:hover{
+    color:rgb(114, 112, 112);
+    cursor:pointer;
+}
 
 @media only screen and (max-width:700px){
     .main-body{

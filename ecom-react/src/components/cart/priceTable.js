@@ -1,9 +1,12 @@
 import React from 'react'
+import { useCart } from '../../context/cartContext/cartContext';
 
 function PriceTable() {
+
+  const {state}=useCart();
   return (
     <>
-   <section className="col-2">
+    {state[0]===undefined?"":<section className="col-2">
   <div className="price-table">
     <table>
       <tbody><tr className="price-table-h">
@@ -30,7 +33,9 @@ function PriceTable() {
     <button className="btn-place-order">Place Order</button>
   </div>
 </section>
-
+}
+    
+   
     </>
   )
 }
